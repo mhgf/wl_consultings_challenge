@@ -1,6 +1,3 @@
 namespace WlChallenge.Domain.Exceptions.Document;
 
-public class DocumentNullException
-{
-    
-}
+public class DocumentNullException(string message) : DomainException(message);

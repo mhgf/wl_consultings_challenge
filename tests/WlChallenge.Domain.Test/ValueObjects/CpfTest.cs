@@ -4,45 +4,45 @@ using WlChallenge.Domain.ValueObjects;
 
 namespace WlChallenge.Domain.Test.ValueObjects;
 
-public class CnpjTest
+public class CpfTest
 {
     [Theory]
-    [InlineData("57286755000111")]
-    [InlineData("55825965000105")]
-    [InlineData("52109719000169")]
-    [InlineData("47296148000189")]
-    [InlineData("47fd296148000189 ")]
-    public void ShouldCreateCnpj(string number)
+    [InlineData("110101@84024")]
+    [InlineData("58269^979074")]
+    [InlineData("233105190gfd90")]
+    [InlineData("34784810072")]
+    [InlineData("635 29249050")]
+    public void ShouldCreateCpf(string number)
     {
-        var cnpj = Cnpj.Create(number);
-        Assert.NotNull(cnpj);
-        Assert.Equal(EDocumentType.Cnpj, cnpj.Type);
+        var cpf = Cpf.Create(number);
+        Assert.NotNull(cpf);
+        Assert.Equal(EDocumentType.Cpf, cpf.Type);
     }
-    
+
     [Theory]
     [InlineData("")]
     [InlineData(" ")]
     public void ShouldFailIfIsNullOrEmptyOrWithSpace(string number)
     {
-        Assert.Throws<CnpjNullOrEmptyException>(() => Cnpj.Create(number));
+        Assert.Throws<CpfNullOrEmptyException>(() => Cpf.Create(number));
     }
-    
+
     [Theory]
     [InlineData("57286755000142424411")]
     [InlineData("4234")]
     public void ShouldFailIfNumberIsInvalidLenght(string number)
     {
-        Assert.Throws<InvalidCnpjLenghtException>(() => Cnpj.Create(number));
+        Assert.Throws<InvalidCpfLenghtException>(() => Cpf.Create(number));
     }
-    
+
     [Theory]
-    [InlineData("87286755000111")]
-    [InlineData("75825965000105")]
-    [InlineData("62109719000169")]
-    [InlineData("57296148000189")]
-    [InlineData("47fd296148002189 ")]
+    [InlineData("1101fd0124024")]
+    [InlineData("52269ds979074")]
+    [InlineData("23314519090")]
+    [InlineData("34784810074")]
+    [InlineData("63529219 050")]
     public void ShouldFailIfNumberIsInvalid(string number)
     {
-        Assert.Throws<InvalidCnpjException>(() => Cnpj.Create(number));
+        Assert.Throws<InvalidCpfException>(() => Cpf.Create(number));
     }
 }

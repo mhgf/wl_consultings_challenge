@@ -1,6 +1,6 @@
+using WlChallenge.Domain.Entities;
+using WlChallenge.Domain.Entities.Abstractions;
+
 namespace WlChallenge.Domain.Repositories;
 
-public interface IReposiotory
-{
-    
-}
+public interface IRepository<TEntity> where TEntity : IAggregateRoot;

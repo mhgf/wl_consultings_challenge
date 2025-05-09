@@ -1,3 +1,3 @@
 namespace WlChallenge.Domain.Exceptions.Wallet;
 
-public class WalletDontHaveBalanceExeption(string message) : DomainException(message);
+public class WalletDontHaveBalanceException(string message) : DomainException(message);

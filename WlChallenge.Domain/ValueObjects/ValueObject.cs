@@ -1,3 +1,3 @@
 namespace WlChallenge.Domain.ValueObjects;
 
-public record ValueObject();
+public abstract record ValueObject();

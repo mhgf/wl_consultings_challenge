@@ -1,3 +1,3 @@
 namespace WlChallenge.Domain.Exceptions.Document;
 
-public class InvalidCpfNumberException(string message) : DomainException(message);
+public class InvalidCnpjException(string message) : DomainException(message);

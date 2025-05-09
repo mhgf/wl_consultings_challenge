@@ -1,3 +1,3 @@
 namespace WlChallenge.Domain.Exceptions.Wallet;
 
-public class InvalidReceiveUserException(string message) : DomainException(message);
+public class InvalidSenderUserException(string message) : DomainException(message);
