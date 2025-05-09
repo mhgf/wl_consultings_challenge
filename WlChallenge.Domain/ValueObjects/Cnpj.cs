@@ -9,7 +9,7 @@ public sealed record Cnpj : Document
 {
     #region Constants
 
-    private const short MinLength = 14;
+    public const short MinLength = 14;
 
     #endregion
 

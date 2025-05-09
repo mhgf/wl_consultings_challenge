@@ -72,6 +72,8 @@ public class Wallet : Entity
         Balance = balance;
         _transactions.Add(Transaction.Create(UserId, receiverId, amount, ETransactionType.Outgoing));
     }
+    
+    
 
     #endregion
 }

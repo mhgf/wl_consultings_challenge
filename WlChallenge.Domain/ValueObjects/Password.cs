@@ -8,8 +8,8 @@ public sealed record Password
 {
     #region Constants
 
-    private const int MinimumLength = 12;
-    private const int MaximumLength = 48;
+    public const short MinimumLength = 12;
+    public const short MaximumLength = 48;
 
     #endregion
 

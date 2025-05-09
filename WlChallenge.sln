@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WlChallenge.Domain", "WlChallenge.Domain\WlChallenge.Domain.csproj", "{2C6ED713-BA75-4B0A-8B6C-A06B21E2F759}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8CB1DB7-EC9B-4F8D-AD2C-B4694016CFEA}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		.editorconfig = .editorconfig
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8ECE4CAD-79B7-46E8-9700-D2C86ECBD652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WlChallenge.Domain.Test", "tests\WlChallenge.Domain.Test\WlChallenge.Domain.Test.csproj", "{ECB210E0-6637-4E7F-89A1-2A3391A3CC96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WlChallenge.Application", "WlChallenge.Application\WlChallenge.Application.csproj", "{1632A2CD-AE40-4642-8453-D1C735E8D533}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Environment", "Environment", "{482C6799-AF68-40BC-B3C8-A4EDEDE53B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WlChallenge.Application.Test", "tests\WlChallenge.Application.Test\WlChallenge.Application.Test.csproj", "{32086123-5713-4FAE-A6FF-ED8535784DEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C6ED713-BA75-4B0A-8B6C-A06B21E2F759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C6ED713-BA75-4B0A-8B6C-A06B21E2F759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C6ED713-BA75-4B0A-8B6C-A06B21E2F759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C6ED713-BA75-4B0A-8B6C-A06B21E2F759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB210E0-6637-4E7F-89A1-2A3391A3CC96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB210E0-6637-4E7F-89A1-2A3391A3CC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB210E0-6637-4E7F-89A1-2A3391A3CC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB210E0-6637-4E7F-89A1-2A3391A3CC96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1632A2CD-AE40-4642-8453-D1C735E8D533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1632A2CD-AE40-4642-8453-D1C735E8D533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1632A2CD-AE40-4642-8453-D1C735E8D533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1632A2CD-AE40-4642-8453-D1C735E8D533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32086123-5713-4FAE-A6FF-ED8535784DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32086123-5713-4FAE-A6FF-ED8535784DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32086123-5713-4FAE-A6FF-ED8535784DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32086123-5713-4FAE-A6FF-ED8535784DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ECB210E0-6637-4E7F-89A1-2A3391A3CC96} = {8ECE4CAD-79B7-46E8-9700-D2C86ECBD652}
+		{32086123-5713-4FAE-A6FF-ED8535784DEF} = {8ECE4CAD-79B7-46E8-9700-D2C86ECBD652}
+	EndGlobalSection
+EndGlobal

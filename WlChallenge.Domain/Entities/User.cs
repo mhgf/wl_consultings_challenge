@@ -58,4 +58,20 @@ public class User : Entity, IAggregateRoot
     public Wallet Wallet { get; private set; } = null!;
 
     #endregion
+
+    #region Computed properties
+
+    public int Balance => Wallet.Balance;
+
+    #endregion
+
+    #region Public Methods
+
+    public void AddAmountToWallet(int amount) => Wallet.AddAmount(amount);
+
+    public void SendAmountToUser(Guid receiverId, int amount) => Wallet.SendAmount(receiverId, amount);
+
+    public void ReceiveAmountFromUser(Guid senderId, int amount) => Wallet.ReceiveAmount(senderId, amount);
+
+    #endregion
 }

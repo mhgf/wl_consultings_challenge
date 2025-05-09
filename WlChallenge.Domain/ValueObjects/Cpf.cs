@@ -9,7 +9,7 @@ public sealed record Cpf : Document
 {
     #region Constants
 
-    private const short MinLength = 11;
+    public const short MinLength = 11;
 
     #endregion
 
