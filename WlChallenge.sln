@@ -18,9 +18,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WlChallenge.Domain.Test", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WlChallenge.Application", "WlChallenge.Application\WlChallenge.Application.csproj", "{1632A2CD-AE40-4642-8453-D1C735E8D533}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Environment", "Environment", "{482C6799-AF68-40BC-B3C8-A4EDEDE53B55}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WlChallenge.Application.Test", "tests\WlChallenge.Application.Test\WlChallenge.Application.Test.csproj", "{32086123-5713-4FAE-A6FF-ED8535784DEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WlChallenge.Infra", "WlChallenge.Infra\WlChallenge.Infra.csproj", "{80CB5B07-E10B-43AC-878D-2D22C996E984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WlChallenge.Api", "WlChallenge.Api\WlChallenge.Api.csproj", "{BAD09E25-8299-45C0-BFB8-37721DBF7D64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Environment", "Environment", "{29FA8651-CB2E-4725-8285-20B7C21B26F0}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +54,14 @@ Global
 		{32086123-5713-4FAE-A6FF-ED8535784DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32086123-5713-4FAE-A6FF-ED8535784DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32086123-5713-4FAE-A6FF-ED8535784DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80CB5B07-E10B-43AC-878D-2D22C996E984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80CB5B07-E10B-43AC-878D-2D22C996E984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80CB5B07-E10B-43AC-878D-2D22C996E984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80CB5B07-E10B-43AC-878D-2D22C996E984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAD09E25-8299-45C0-BFB8-37721DBF7D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAD09E25-8299-45C0-BFB8-37721DBF7D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAD09E25-8299-45C0-BFB8-37721DBF7D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAD09E25-8299-45C0-BFB8-37721DBF7D64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ECB210E0-6637-4E7F-89A1-2A3391A3CC96} = {8ECE4CAD-79B7-46E8-9700-D2C86ECBD652}

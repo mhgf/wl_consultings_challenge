@@ -4,7 +4,7 @@ using WlChallenge.Domain.Exceptions.Document;
 
 namespace WlChallenge.Domain.ValueObjects;
 
-public abstract record Document
+public record Document
 {
     #region Constructors
 

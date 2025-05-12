@@ -45,7 +45,8 @@ public class Wallet : Entity
     {
         if (amount <= 0) return;
         Balance += amount;
-        _transactions.Add(Transaction.Create(UserId, UserId, amount, ETransactionType.Incoming));
+        _transactions.Add(Transaction.Create(Id, UserId, UserId, amount, ETransactionType.Incoming));
+        Tracker.Update();
     }
 
     public void ReceiveAmount(Guid senderId, int amount)
@@ -55,25 +56,25 @@ public class Wallet : Entity
 
         if (amount <= 0) return;
         Balance += amount;
-        _transactions.Add(Transaction.Create(senderId, UserId, amount, ETransactionType.Incoming));
+        _transactions.Add(Transaction.Create(Id, senderId, UserId, amount, ETransactionType.Incoming));
+        Tracker.Update();
     }
 
     public void SendAmount(Guid receiverId, int amount)
     {
         if (receiverId == Guid.Empty)
             throw new InvalidReceiverUserException(ErrorMessages.Wallet.InvalidReceiverId);
-        
-        
+
+
         if (amount <= 0) return;
         var balance = Balance - amount;
         if (balance < 0)
             throw new WalletDontHaveBalanceException(ErrorMessages.Wallet.NoBalance);
 
         Balance = balance;
-        _transactions.Add(Transaction.Create(UserId, receiverId, amount, ETransactionType.Outgoing));
+        _transactions.Add(Transaction.Create(Id, UserId, receiverId, amount, ETransactionType.Outgoing));
+        Tracker.Update();
     }
-    
-    
 
     #endregion
 }

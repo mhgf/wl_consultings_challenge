@@ -1,0 +1,38 @@
+﻿services:
+  wlchallenge.api:
+    depends_on:
+      database:
+        condition: service_healthy
+        restart: true
+    image: wlchallenge.api
+    build:
+      context: .
+      dockerfile: WlChallenge.Api/Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=pgDatabase;Port=5432;Database=mydatabase;User Id=url;Password=mypassword;
+      - Jwt__Key="#2jVd2pLfR5tbBFvUmhcC%y7GtAND%rlWyh7jF3xHiFRKdm9E"
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 4001:8080
+  
+  
+  database:
+    container_name: pgDatabase
+    image: postgres:latest
+    restart: always 
+    environment:
+      - POSTGRES_USER=url 
+      - POSTGRES_PASSWORD=mypassword 
+      - POSTGRES_DB=mydatabase 
+    volumes:
+      - db_data:/var/lib/postgresql
+    ports:
+      - 4000:5432 
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U myuser -d mydatabase" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db_data:

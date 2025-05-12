@@ -9,6 +9,9 @@ public class Handler(IUserRepository userRepository, IUnitOfWork unitOfWork) : I
 {
     public async Task<Result> Handle(Command request, CancellationToken cancellationToken)
     {
+        if (request.SenderId == request.ReceiverId)
+            return Result.Failure("Dados inválidos.");
+
         var sender = await userRepository.FindById(request.SenderId, cancellationToken);
         if (sender is null)
             return Result.Failure("Usuário não encontrado.");

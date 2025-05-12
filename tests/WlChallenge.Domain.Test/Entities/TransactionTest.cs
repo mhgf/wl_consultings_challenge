@@ -15,7 +15,7 @@ public class TransactionTest
         var senderId = Guid.NewGuid();
         var receiverId = Guid.NewGuid();
 
-        var transaction = Transaction.Create(senderId, receiverId, amount, transactionType);
+        var transaction = Transaction.Create(Guid.NewGuid(), senderId, receiverId, amount, transactionType);
         Assert.NotNull(transaction);
         Assert.Equal(senderId, transaction.SenderId);
         Assert.Equal(receiverId, transaction.ReceiverId);
@@ -33,7 +33,7 @@ public class TransactionTest
         var receiverId = Guid.NewGuid();
 
         Assert.Throws<InvalidTransactionAmountException>(() =>
-            Transaction.Create(senderId, receiverId, amount, transactionType));
+            Transaction.Create(Guid.NewGuid(), senderId, receiverId, amount, transactionType));
     }
 
     [Theory]
@@ -42,6 +42,6 @@ public class TransactionTest
     public void ShouldFailIdSenderOrReceiverIsInvalid(Guid senderId, Guid receiverId)
     {
         Assert.Throws<InvalidTransactionUserIdException>(() =>
-            Transaction.Create(senderId, receiverId, 1, ETransactionType.Incoming));
+            Transaction.Create(Guid.NewGuid(), senderId, receiverId, 1, ETransactionType.Incoming));
     }
 }
